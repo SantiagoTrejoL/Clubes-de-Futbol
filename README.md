@@ -19,7 +19,10 @@ Este proyecto es una página web estática que muestra información sobre alguno
 
 ## Estructura del proyecto
 
-. ├── index.html # Archivo principal HTML ├── styles.css # Archivo CSS con los estilos └── images/ # Carpeta con los escudos de los equipos
+. 
+├── index.html # Archivo principal HTML 
+├── styles.css # Archivo CSS con los estilos 
+└── images/ # Carpeta con los escudos de los equipos
 
 ## Instalación
 
