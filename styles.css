@@ -10,27 +10,18 @@ body {
     padding: 0;
 }
 
-.playwrite-gb-j-guides-regular {
-    font-family: "Playwrite GB J Guides", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .playwrite-gb-j-guides-regular-italic {
-    font-family: "Playwrite GB J Guides", cursive;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-
 /* Header */
 header {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
+    position: sticky;
+    top: 0; /* Hace que el encabezado se quede fijo en la parte superior */
+    z-index: 1000; /* Asegura que el encabezado esté sobre otros elementos */
 }
 
+/* Título principal */
 h1 {
     font-size: 2.5em;
     color: #ecf0f1; /* Color más claro para el título */
@@ -39,6 +30,8 @@ h1 {
 
 /* Main content */
 main {
+    display: flex;
+    flex-direction: column; /* Disposición de las secciones en columna */
     padding: 20px;
 }
 
@@ -48,6 +41,8 @@ main {
     background-color: rgba(0, 0, 0, 0.05);
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Título de las secciones */
@@ -63,9 +58,9 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Diseño con grid */
-    gap: 1%;
+    display: flex;
+    flex-wrap: wrap; /* Flexbox con envoltura */
+    justify-content: space-between; /* Distribuye los elementos de manera uniforme */
 }
 
 /* Equipos */
@@ -77,6 +72,7 @@ ul {
     padding: 15px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 0 220px; /* Flex con un ancho base mínimo de 220px */
     box-sizing: border-box; /* Garantiza que el padding y borde no se sumen al ancho */
 }
 
@@ -132,12 +128,12 @@ footer p {
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
     .equipo {
-        width: 46%;
+        flex: 1 0 46%; /* Reducción del ancho para pantallas medianas */
     }
 }
 
 @media (max-width: 480px) {
     .equipo {
-        width: 100%;
+        flex: 1 0 100%; /* Ancho completo para pantallas pequeñas */
     }
 }
