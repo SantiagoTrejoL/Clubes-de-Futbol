@@ -1,158 +1,220 @@
 /* Estilo general */
 * {
-    box-sizing: border-box; /* Asegura que los márgenes y rellenos no afecten el tamaño total de los elementos */
+  box-sizing: border-box; /* Asegura que los márgenes y rellenos no afecten el tamaño total de los elementos */
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Fuente principal */
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Permite alinear los hijos verticalmente */
-    justify-content: center; /* Centra el contenido del body verticalmente */
-    align-items: center; /* Centra el contenido del body horizontalmente */
-    min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+  font-family: "Roboto", sans-serif; /* Fuente principal */
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Permite alinear los hijos verticalmente */
+  justify-content: center; /* Centra el contenido del body verticalmente */
+  align-items: center; /* Centra el contenido del body horizontalmente */
+  min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
 }
 
 /* Header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0; /* Sticky header */
-    z-index: 1000;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido del header */
-    align-items: center; /* Centra verticalmente el contenido del header */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido del header */
+  align-items: center; /* Centra verticalmente el contenido del header */
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #ecf0f1; /* Color más claro para el título */
+  font-size: 2.5em;
+  color: #ecf0f1; /* Color más claro para el título */
 }
 
 /* Main content */
 main {
-    padding: 20px;
-    display: flex;
-    flex-direction: column; /* Secciones en columna */
-    align-items: stretch; /* Cada sección ocupa el ancho completo */
-    gap: 20px; /* Espacio entre las secciones */
-    width: 100%; /* Ocupa todo el ancho del body */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Secciones en columna */
+  align-items: stretch; /* Cada sección ocupa el ancho completo */
+  gap: 20px; /* Espacio entre las secciones */
+  width: 100%; /* Ocupa todo el ancho del body */
 }
 
 /* Secciones por país */
 .pais {
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra horizontalmente el contenido de la sección */
-    background-color: rgba(0, 0, 0, 0.05);
-    gap: 20px; /* Espacio entre el título y los equipos */
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenido de la sección */
+  background-color: rgba(0, 0, 0, 0.05);
+  gap: 20px; /* Espacio entre el título y los equipos */
 }
 
 /* Título de las secciones */
 h2 {
-    color: #2c3e50;
-    text-transform: uppercase;
-    font-size: 2em;
-    text-align: center;
+  color: #2c3e50;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
 }
 
 /* Equipos */
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap; /* Alineación multilínea */
-    justify-content: space-around; /* Distribuye los equipos de manera uniforme */
-    align-content: center; /* Alinea el contenido en el eje transversal */
-    gap: 20px; /* Espaciado entre tarjetas */
-    width: 100%; /* Ajusta el ancho a la sección */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Alineación multilínea */
+  justify-content: space-around; /* Distribuye los equipos de manera uniforme */
+  align-content: center; /* Alinea el contenido en el eje transversal */
+  gap: 20px; /* Espaciado entre tarjetas */
+  width: 100%; /* Ajusta el ancho a la sección */
 }
 
 /* Tarjetas de equipo */
 .equipo {
-    background-color: white;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1 0 220px; /* Flex con un ancho base mínimo de 220px */
-    display: flex;
-    flex-direction: column; /* Para centrar verticalmente el contenido dentro de la tarjeta */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    max-width: 300px; /* Limita el ancho máximo de las tarjetas */
+  background-color: white;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 0 220px; /* Flex con un ancho base mínimo de 220px */
+  display: flex;
+  flex-direction: column; /* Para centrar verticalmente el contenido dentro de la tarjeta */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  max-width: 300px; /* Limita el ancho máximo de las tarjetas */
 }
 
 /* Hover effect */
 .equipo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Imágenes */
 .equipo img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-    align-self: center; /* Asegura que la imagen esté centrada dentro de la tarjeta */
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  align-self: center; /* Asegura que la imagen esté centrada dentro de la tarjeta */
 }
 
 /* Títulos de equipos */
 .equipo h3 {
-    font-size: 1.5em;
-    color: #34495e;
-    margin: 10px 0;
-    text-align: center;
+  font-size: 1.5em;
+  color: #34495e;
+  margin: 10px 0;
+  text-align: center;
 }
 
 /* Texto de información */
 .equipo p {
-    color: #7f8c8d;
-    margin: 5px 0;
-    text-align: center;
+  color: #7f8c8d;
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around; /* Espacio uniforme entre enlaces */
+  align-items: center; /* Asegura que los enlaces estén centrados verticalmente */
+  background-color: #333; /* Fondo oscuro */
+  padding: 15px 0; /* Espaciado vertical */
+  position: sticky; /* Navbar fijo al hacer scroll */
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none; /* Elimina subrayado */
+  color: white; /* Color del texto */
+  font-size: 1.2em; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negritas */
+  padding: 10px 15px; /* Espaciado interno para mayor clicabilidad */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza los efectos */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.navbar a:hover {
+  background-color: #ecf0f1; /* Fondo claro al pasar el ratón */
+  color: #333; /* Cambia el color del texto */
+}
+
+/* Social Media Section Styles */
+#social_media {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#social_media a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+#social_media img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#social_media a:hover {
+  transform: scale(1.1);
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 40px;
-    width: 100%; /* Ocupa todo el ancho disponible */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido del footer */
-    align-items: center; /* Centra verticalmente el contenido del footer */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido del footer */
+  align-items: center; /* Centra verticalmente el contenido del footer */
+}
+
+#rights_reserved p {
+  font-size: 0.75em;
+  color: #c3c3c3;
+}
+
+
+section {
+  scroll-margin-top: 80px; /* Ajusta el valor según la altura del navbar */
+  padding: 60px 20px; /* Resto del diseño */
+  margin: 20px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 }
 
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
-    ul {
-        justify-content: center; /* Centra los equipos en dispositivos más pequeños */
-    }
+  ul {
+    justify-content: center; /* Centra los equipos en dispositivos más pequeños */
+  }
 
-    .equipo {
-        flex: 1 0 46%; /* Reduce el ancho para pantallas medianas */
-    }
+  .equipo {
+    flex: 1 0 46%; /* Reduce el ancho para pantallas medianas */
+  }
 }
 
 @media (max-width: 480px) {
-    ul {
-        justify-content: center; /* Mantiene la alineación centrada */
-    }
+  ul {
+    justify-content: center; /* Mantiene la alineación centrada */
+  }
 
-    .equipo {
-        flex: 1 0 100%; /* Ancho completo en dispositivos pequeños */
-    }
+  .equipo {
+    flex: 1 0 100%; /* Ancho completo en dispositivos pequeños */
+  }
 }
