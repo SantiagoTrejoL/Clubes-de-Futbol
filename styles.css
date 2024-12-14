@@ -1,6 +1,10 @@
 /* Estilo general */
+* {
+    box-sizing: border-box; /* Asegura que los márgenes y rellenos no afecten el tamaño total de los elementos */
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif; /* Mantiene la fuente actual */
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -15,6 +19,8 @@ header {
 
 h1 {
     font-size: 2.5em;
+    color: #ecf0f1; /* Color más claro para el título */
+    text-align: center; /* Centrado del texto */
 }
 
 main {
@@ -34,17 +40,21 @@ h2 {
     text-transform: uppercase;
     font-size: 2em;
     text-align: center;
+    font-family: 'Arial', sans-serif; /* Usa la misma fuente */
 }
 
 /* Estilo de cada equipo */
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Diseño con grid */
+    gap: 1%;
 }
 
+/* Equipos */
 .equipo {
-    display: inline-block;
-    width: 22%;
     background-color: white;
     margin: 1%;
     border: 2px solid rgba(0, 0, 0, 0.1);
@@ -52,6 +62,7 @@ ul {
     padding: 15px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Garantiza que el padding y borde no se sumen al ancho */
 }
 
 .equipo:hover {
@@ -66,25 +77,27 @@ ul {
     margin-bottom: 10px;
 }
 
-/* Titulos de equipos */
+/* Títulos de equipos */
 .equipo h3 {
     font-size: 1.5em;
     color: #34495e;
+    text-align: center; /* Centrado de los títulos */
 }
 
 /* Texto de información */
 .equipo p {
     color: #7f8c8d;
     margin: 10px 0;
+    text-align: center; /* Centrado del texto */
 }
 
 /* Pseudoclases */
 .equipo:hover h3 {
-    color: #2980b9;
+    color: #2980b9; /* Cambia el color del título en hover */
 }
 
 .equipo:hover p {
-    color: #2c3e50;
+    color: #2c3e50; /* Cambia el color del párrafo en hover */
 }
 
 footer {
